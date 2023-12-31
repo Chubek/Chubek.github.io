@@ -4,7 +4,6 @@ BEGIN {
     inCodeBlock = 0
     inLink = 0
     inTable = 0
-    print "<html><head><title>Markdown to HTML</title></head><body>"
 }
 
 # Headers
@@ -125,6 +124,5 @@ END {
     if (inLink) {
         print "</a>"
     }
-    print "</body></html>"
 }
 
