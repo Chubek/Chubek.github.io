@@ -37,7 +37,7 @@ BEGIN {
 
 # Hyperlinks
 /\[.*\]\(.*\)/ {
-    linkText = gensub(/\[|\]/, "", "g")
+    linkText = gensub(/\[|\]\(.*\)/, "", "g")
     linkURL = gensub(/.*\(|\)/, "", "g")
     print "<a href=\"" linkURL "\">" linkText
     inLink = 1
